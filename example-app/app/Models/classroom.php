@@ -9,4 +9,7 @@ class classroom extends Model
 {
     /** @use HasFactory<\Database\Factories\ClassroomFactory> */
     use HasFactory;
+    public function students (){
+        return $this->hasMany(student::class);
+    }
 }
