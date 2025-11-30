@@ -9,4 +9,7 @@ class parent_information extends Model
 {
     /** @use HasFactory<\Database\Factories\ParentInformationFactory> */
     use HasFactory;
+    public function students(){
+        return $this->belongsTo(student::class);
+    }
 }

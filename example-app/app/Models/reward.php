@@ -9,4 +9,7 @@ class reward extends Model
 {
     /** @use HasFactory<\Database\Factories\RewardFactory> */
     use HasFactory;
+    public function students(){
+        return $this->belongsTo(student::class);
+    }
 }

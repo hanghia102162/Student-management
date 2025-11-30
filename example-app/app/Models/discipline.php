@@ -9,4 +9,7 @@ class discipline extends Model
 {
     /** @use HasFactory<\Database\Factories\DisciplineFactory> */
     use HasFactory;
+    public function students(){
+        return $this->hasMany(student::class);
+    }
 }
